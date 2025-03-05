@@ -16,6 +16,9 @@ html{
 .azulOscuro{
     color: var(--azul-oscuro) !important;
 }
+.blanco{
+    color: var(--blaco);
+}
 .body-claro{
     background-color: var(--blaco) !important;
     color: var(--azul-oscuro) !important;

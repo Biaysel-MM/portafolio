@@ -4,6 +4,8 @@ const btnmodooscuro = document.querySelector('.btn-modo-oscuro');
 const  proyectosCartsContentP1 = document.querySelector('.proyectos__carts-content-p1');
 const  proyectosCartsContentP2 = document.querySelector('.proyectos__carts-content-p2');
 const  github = document.querySelector('.github');
+const  faBarsClose = document.querySelector('#fa-bars-close');
+const  faBarsOpen = document.querySelector('#fa-bars-open');
 
 navbtnmodo.addEventListener('click', function(){
     btnmodooscuro.classList.toggle('btn-modo-claro-cambio');
@@ -11,6 +13,8 @@ navbtnmodo.addEventListener('click', function(){
     proyectosCartsContentP1.classList.toggle('azulOscuro');
     proyectosCartsContentP2.classList.toggle('azulOscuro');
     github.classList.toggle('azulOscuro');
+    faBarsClose.classList.toggle('blanco');
+    faBarsOpen.classList.toggle('blanco');
 });
 
 
@@ -23,6 +27,8 @@ navbtnmodoResponsive.addEventListener('click', function(){
     proyectosCartsContentP1.classList.toggle('azulOscuro');
     proyectosCartsContentP2.classList.toggle('azulOscuro');
     github.classList.toggle('azulOscuro');
+    faBarsClose.classList.toggle('blanco');
+    faBarsOpen.classList.toggle('blanco');
 });
 
 
@@ -33,6 +39,8 @@ const navContainerGeneral = document.querySelector('.nav__container-general');
 menuResponsive.addEventListener('click', function(){
     navSecundResponsive.classList.toggle('classFlex');
     navContainerGeneral.classList.toggle('nav__container-general-responsive');
+    faBarsClose.classList.toggle('none');
+    faBarsOpen.classList.toggle('none');
 });
 
 
