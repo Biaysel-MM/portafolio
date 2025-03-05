@@ -20,6 +20,9 @@ const btnmodooscuroResponsive = document.querySelector('.btn-modo-oscuro-respons
 navbtnmodoResponsive.addEventListener('click', function(){
     btnmodooscuroResponsive.classList.toggle('btn-modo-claro-cambio-responsive');
     body.classList.toggle('body-claro');
+    proyectosCartsContentP1.classList.toggle('azulOscuro');
+    proyectosCartsContentP2.classList.toggle('azulOscuro');
+    github.classList.toggle('azulOscuro');
 });
 
 
