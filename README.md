@@ -3,7 +3,7 @@
 Este es mi portafolio personal, una landing page donde presento mi trabajo como desarrollador web. Aquí encontrarás información sobre mí, mis proyectos y formas de contacto.
 
 ## 🚀 Tecnologías Utilizadas
- 
+  
 - HTML5
 - CSS3
 - JavaScript
