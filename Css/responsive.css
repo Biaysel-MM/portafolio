@@ -1,0 +1,471 @@
+:root{
+    --azul-oscuro: #0E1821;
+    --azul-gris: #44535e;
+    --azul-gris2claro: #44535e8f;
+    --verde-oscuro: #798F8C;
+    --blanco-clarito: #D9EBE9;
+    --verde-claro: #08A392;
+    --blaco: #fff;
+    --negro: #000;
+}
+
+/* 1200px: Laptops pequeños
+1024px: Tabletas en modo paisaje
+768px: Tabletas en modo retrato
+480px: Teléfonos en modo paisaje
+414px: Teléfonos más grandes
+375px: Teléfonos medianos
+320px: Teléfonos muy pequeños */
+
+/* seccion del nav  */
+.contiene-todo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+    /* seccion del contenido principal */
+    .main__content{
+        width: 100%;
+        margin-left: 50px;
+    }
+    .main__container-general{
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    .main__imagen{
+        align-self: center;
+    }
+    .main__imagen img{
+        max-height: 360px;
+    }
+    
+    /* seccion de proyectos */
+    .proyectos__carts{
+        flex-direction: column;
+    }
+    .proyectos__carts-content p{
+        max-width: 600px;
+    }
+    .proyectos__carts-img-principal {
+        max-width: 600px;
+    }
+    /* seccion de sobre mi y habilidades */
+    .sobre-mi__container-general{
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 0px;
+    }
+    #sobre-mi{
+        padding-top: 40px;
+        margin-top: -40px;
+    }
+    .sobre-mi__titulo2{
+        justify-content: start;
+    }
+    .sobre-mi__content1{
+        margin-top: 20px;
+    }
+    .sobre-mi__content1, .sobre-mi__content2{
+        max-width: 750px;
+    }
+    .sobre-mi__titulo2{
+        width: 100%;
+        align-self: flex-start;
+    }
+    /* seccion de contactos */
+    .contacto__container-general{
+        max-width: 750px;
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacto__content{
+        display: flex;
+        flex-direction: column;
+        max-width: 750px;
+    }
+    .contacto__formulario{
+        width: 100%;
+    }
+    .contacto__imagen-de-contacto{
+        max-width: 100%;
+    }
+    .contacto-titulo{
+        align-self: flex-start;
+    }
+    .contacto__imagen-de-contacto img{
+        margin: 20px 0;
+        max-width: 60%;
+    }
+
+}
+
+@media (max-width: 1110px) {
+    /* seccion del contenido principal */
+    .main__content h2{
+        font-size: 55px; 
+    }
+    .main__content h1{
+        font-size: 70px; 
+    }
+    .main__content p{
+        font-size: 18px;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 990px) {
+    /* seccion del contenido principal */
+    .main__content{
+        width: 100%;
+        margin-left: 50px;
+    }
+    .main__container-general{
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    .main__imagen{
+        margin-bottom: 50px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 865px) {
+    /* seccion del nav  */
+    .nav__container-general{
+        width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* seccion del nav  */
+    .classFlex{
+        display: flex;
+    }
+    .nav__navbar-container{
+        display: none;
+    }
+    .nav__container-general-responsive{
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+    .nav__btn-modo{
+        display: none;
+    }
+    .nav__menuResponsive{
+        display: block;
+        padding: 5px 8px;
+        border-radius: 50%;
+        transition: all .3s ease;
+    } 
+    .nav__menuResponsive:hover{
+        background-color: var(--verde-oscuro);
+        cursor: pointer;
+        transition: all .3s ease;
+    } 
+    .nav__navbar-container-general-responsive{
+        width: 700px;
+        height: 80vh;    
+        background-color: #44535eee;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        position: fixed;
+    }
+    .nav__navbar-container-responsive{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .navbar-container__link{
+        font-size: 20px;
+    }
+    .nav__btn-modo-responsive{
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+    }
+
+}
+
+@media (max-width: 725px) {
+    /* seccion del nav  */
+    .nav__container-general-responsive{
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+    .nav__navbar-container-general-responsive{
+        width: 600px;
+    }
+    .nav__container-general{
+        width: 600px;
+    }  
+    .navbar-container__link{
+        font-size: 16px;
+    }
+    /* seccion de sobre mi y habilidades */
+    .sobre-mi__parrafos p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 630px) {
+    /* seccion del nav  */
+    .nav__container-general-responsive{
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+    .nav__navbar-container-general-responsive{
+        width: 500px;
+    }
+    .nav__container-general{
+        width: 500px;
+    }
+    /* seccion del contenido principal */
+    .main__content h2{
+        font-size: 50px; 
+    }
+    .main__content h1{
+        font-size: 65px; 
+    }
+    .main__content p{
+        font-size: 16px;
+        max-width: 600px;
+    }
+    .main__logos a i{
+        font-size: 40px;
+    }
+    .main__logos a img{
+        width: 40px;
+    }
+    /* seccion de proyectos */
+    .todos-los-titulo i{
+        font-size: 30px;
+    }
+    .todos-los-titulo h1{
+        font-size: 40px;
+    }
+    .proyectos__carts-content h2{
+        font-size: 30px;
+    }
+    .carts-content__herra-icon img{
+        max-width: 25px;
+    }
+    .carts-content__herra-icon h3{
+        font-size: 16px;
+    }
+    .proyectos__carts-content p{
+        font-size: 16px;
+    }
+    .carts-content__vista-icon h3{
+        font-size: 16px;
+    }
+    /* seccion de sobre mi y habilidades */
+    .sobre-mi__parrafos p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 530px) {
+    /* seccion del nav  */
+    .nav__container-general-responsive{
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+    .nav__navbar-container-general-responsive{
+        width: 400px;
+    }
+    .nav__container-general{
+        width: 400px;
+    }
+}
+@media (max-width: 480px) {
+    /* seccion del contenido principal */
+    .main__container-general{
+        height: auto;
+    }
+    .main__content h2{
+        font-size: 45px; 
+    }
+    .main__content h1{
+        font-size: 55px; 
+    }
+    .main__content p{
+        font-size: 15px;
+        max-width: 600px;
+    }
+    .main__imagen{
+        margin: 0px;
+        align-self: center;
+    }
+    .main__logos a i{
+        font-size: 30px;
+    }
+    .main__logos a img{
+        width: 30px;
+    }
+    .main__logos{
+        gap: 15px;
+    }
+    /* seccion de sobre mi y habilidades */
+    .sobre-mi__parrafos p{
+        font-size: 15px;
+    }
+    /* seccion de contactos */
+    .contacto__form-container input{
+        font-size: 16px;
+    }
+    .contacto__form-container label{
+        font-size: 18px;
+    }
+    .contacto__formulario button{
+        font-size: 18px;
+        width: 165px;       
+    }
+    /* seccion del footer */
+    .footer__container-general p{
+        font-size: 18px;
+    }
+}
+@media (max-width: 430px) {
+    /* seccion del nav  */
+    .nav__container-general-responsive{
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+    .nav__navbar-container-general-responsive{
+        width: 300px;
+    }
+    .nav__container-general{
+        width: 300px;
+    }
+    /* seccion del contenido principal */
+    .main__content{
+        margin-left: 0;
+    }
+    .main__content h2{
+        font-size: 40px; 
+    }
+    .main__content h1{
+        font-size: 50px; 
+    }
+    .main__content p{
+        font-size: 14px;
+        max-width: 600px;
+    }
+    .main__logos a i{
+        font-size: 30px;
+    }
+    .main__logos a img{
+        width: 30px;
+    }
+    /* seccion de proyectos */
+    .todos-los-titulo i{
+        font-size: 25px;
+    }
+    .todos-los-titulo h1{
+        font-size: 35px;
+    }
+    .proyectos__carts-content h2{
+        font-size: 25px;
+    }
+    .carts-content__herra-icon img{
+        max-width: 20px;
+    }
+    .carts-content__herra-icon h3{
+        font-size: 15px;
+    }
+    .proyectos__carts-content p{
+        font-size: 15px;
+    }
+    .carts-content__vista-icon h3{
+        font-size: 15px;
+    }
+    /* seccion de sobre mi y habilidades */
+    .sobre-mi__parrafos p{
+        font-size: 14px;
+    }
+    /* seccion de contactos */
+    .contacto__formulario button{
+        font-size: 16px;
+        width: 160px;       
+    }
+    /* seccion del footer */
+    .footer__container-general p{
+        font-size: 16px;
+    }
+}
+@media (max-width: 360px) {
+    /* seccion del nav  */
+    .nav__container-general-responsive{
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+    .nav__navbar-container-general-responsive{
+        width: 270px;
+    }
+    .nav__container-general{
+        width: 270px;
+    }
+    /* seccion del contenido principal */
+    .main__content h2{
+        font-size: 30px; 
+    }
+    .main__content h1{
+        font-size: 40px; 
+    }
+    .main__content p{
+        font-size: 12px;
+        max-width: 600px;
+    }
+    .main__logos a i{
+        font-size: 25px;
+    }
+    .main__logos a img{
+        width: 25px;
+    }
+    
+    /* seccion de proyectos */
+    .todos-los-titulo i{
+        font-size: 20px;
+    }
+    .todos-los-titulo h1{
+        font-size: 30px;
+    }
+    .proyectos__carts-content h2{
+        font-size: 20px;
+    }
+    .carts-content__herra-icon img{
+        max-width: 15px;
+    }
+    .carts-content__herra-icon h3{
+        font-size: 10px;
+    }
+    .proyectos__carts-content p{
+        font-size: 12px;
+    }
+    .carts-content__vista-icon h3{
+        font-size: 10px;
+    }
+    /* seccion de sobre mi y habilidades */
+    .sobre-mi__parrafos p{
+        font-size: 14px;
+    }
+    .sobre-mi__container-general{
+        margin-left: 0px;
+    }
+    /* seccion del footer */
+    .footer__container-general p{
+        font-size: 14px;
+    }
+}
+
