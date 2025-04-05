@@ -73,7 +73,38 @@
                 <h1>Proyectos</h1>
             </div>
             <div class="proyectos__carts">
-                <figure class="proyectos__carts-img-principal"><img src="./Images/imagen-ejac.png" alt="imagen-ejac" srcset="" ></figure>
+                <figure class="proyectos__carts-img-principal">
+                    <img src="./Images/imagen-kesia.png" alt="imagen-kesia" srcset="" >
+                </figure>
+                <div class="proyectos__carts-content">
+                    <h2><span class="span-verde">Kesia</span> - Pagina web de una Repostería Artesanal</h2>
+                    <div class="carts-content__herra">
+                        <div class="carts-content__herra-icon icon-nodejs">
+                            <img src="./Images/imagen-nodejs.png" alt="imagen-nodeJs" srcset="">
+                            <h3>NodeJs</h3>
+                        </div>
+                        <div class="carts-content__herra-icon icon-expressjs">
+                            <img src="./Images/imagen-expressjs.png" alt="imagen-expressjs" srcset="">
+                            <h3>ExpressJs</h3>
+                        </div>
+                        <div class="carts-content__herra-icon icon-mysql">
+                            <img src="./Images/imagen-mysql.png" alt="imagen-mysql" srcset="">
+                            <h3>MySql</h3>
+                        </div>
+                    </div>
+                    <p class="proyectos__carts-content-p1">Página web de Kesia, repostería artesanal de Keren Arias. Desarrollada con Node.js, Express y MySQL en el backend, y HTML5, CSS3 y JavaScript en el frontend. Desplegada en Railway para ofrecer una experiencia fluida al descubrir postres, realizar pedidos y disfrutar de dulzura hecha arte.</p>
+                    <div class="carts-content__vista">
+                        <a href="https://kesia-production.up.railway.app/" class="carts-content__vista-icon icon-preview">
+                            <i class="fa-solid fa-link"></i>
+                            <h3>Preview</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="proyectos__carts">
+                <figure class="proyectos__carts-img-principal">
+                    <img src="./Images/imagen-ejac.png" alt="imagen-ejac" srcset="" >
+                </figure>
                 <div class="proyectos__carts-content">
                     <h2><span class="span-verde">EJAC</span> - Pagina web de una escuela primaria</h2>
                     <div class="carts-content__herra">
@@ -90,7 +121,8 @@
                             <h3>JAVASCRIPT</h3>
                         </div>
                     </div>
-                    <p class="proyectos__carts-content-p1">Página web de la Escuela José Altagracia Castillo. Desarrollada con HTML5, CSS3 y JavaScript desde cero. Optimizada para mejorar la experiencia del usuario y facilitar el acceso a la información educativa.</p>
+                    <p class="proyectos__carts-content-p1">Sitio web oficial de la Escuela José Altagracia Castillo. Desarrollado desde cero con HTML5, CSS3 y JavaScript, garantizando un diseño responsivo y accesible. Optimizado para una navegación intuitiva, facilitando la consulta de información académica, calendarios y noticias escolares.
+                    </p>
                     <div class="carts-content__vista">
                         <a href="https://github.com/Biaysel-MM/ejac" class="carts-content__vista-icon icon-code">
                             <i class="fa-brands fa-github"></i>
@@ -123,7 +155,7 @@
                             <h3>JAVASCRIPT</h3>
                         </div>
                     </div>
-                    <p class="proyectos__carts-content-p2">Página web de un centro de la salud. Desarrollada con HTML5, CSS3 y JavaScript desde cero. Optimizada para mejorar la experiencia del usuario y facilitar el acceso a tratamientos claros y concisos para todos.</p>
+                    <p class="proyectos__carts-content-p2">Sitio web profesional para Diagnostic Care, diseñado con tecnologías modernas como HTML5, CSS3 y JavaScript. Ofrece una interfaz limpia y funcional, enfocada en brindar información médica accesible, predecir enfermedades y presentar servicios de salud de manera clara y organizada.</p>
                     <div class="carts-content__vista">
                         <a href="https://github.com/Biaysel-MM/Diagnostic-Care" class="carts-content__vista-icon icon-code">
                             <i class="fa-brands fa-github"></i>
@@ -173,16 +205,24 @@
                         <img src="./Images/imagen-javascript.png" alt="imagen-javascript">
                     </div>
                     <div class="sobre-mi__habilidades">
-                        <h3>FIGMA</h3>
-                        <img src="./Images/imagen-figma.png" alt="imagen-figma">
+                        <h3>NODEJS</h3>
+                        <img src="./Images/imagen-nodejs.png" alt="imagen-nodeJs">
+                    </div>
+                    <div class="sobre-mi__habilidades">
+                        <h3>EXPRESSJS</h3>
+                        <img src="./Images/imagen-expressjs.png" alt="imagen-expressjs">
+                    </div>
+                    <div class="sobre-mi__habilidades">
+                        <h3>MYSQL</h3>
+                        <img src="./Images/imagen-mysql.png" alt="imagen-mysql">
                     </div>
                     <div class="sobre-mi__habilidades">
                         <h3>GIT + GITHUB</h3>
                         <img src="./Images/imagen-git.png" alt="imagen-git">
                     </div>
                     <div class="sobre-mi__habilidades">
-                        <h3>SQL SERVER</h3>
-                        <img src="./Images/imagen-sql.png" alt="imagen-sql">
+                        <h3>FIGMA</h3>
+                        <img src="./Images/imagen-figma.png" alt="imagen-figma">
                     </div>
                 </div>
             </div>
@@ -196,21 +236,27 @@
                 <h1>Contacto</h1>
             </div>
             <div class="contacto__content">
-                <form class="contacto__formulario">
+                <form class="contacto__formulario" action="https://formsubmit.co/gamerbian001@gmail.com" method="POST">
+                    <!-- Campos ocultos para configuración -->
+                    <input type="hidden" name="_next" value="https://biaysel-mm.github.io/portafolio/#contacto#success">
+                    <input type="hidden" name="_template" value="basic">
+    
                     <div class="contacto__form-container">
                         <label for="name">Escribe tu nombre:</label>
-                        <input type="text" name="name" id="name" placeholder="Juan Arcantara">
+                        <input type="text" name="name" id="name" placeholder="Juan Arcantara" required>
                     </div>
                     <div class="contacto__form-container">
                         <label for="email">Escribe tu correo:</label>
-                        <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com">
+                        <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required>
                     </div>
                     <div class="contacto__form-container">
                         <label for="mensaje">Escribe tu mensaje:</label>
-                        <textarea name="mensaje" id="mensaje" placeholder="Mensaje..."></textarea>
+                        <textarea name="mensaje" id="mensaje" placeholder="Mensaje..." required></textarea>
                     </div>
                     <button type="submit">Enviar mensaje</button>
                 </form>
+                <!-- Añade este div para el mensaje (puedes ponerlo al final de tu body) -->
+                <div id="success" class="success-message" style="display: none;">¡Mensaje enviado con éxito!</div>
                 <div class="contacto__imagen-de-contacto">
                     <img src="./Images/imagen-de-contacto.png" alt="imagen-de-contacto">
                 </div>
@@ -223,6 +269,7 @@
             <p>© 2024 BiayselMM. Casi todos los derechos reservados</p>
         </div>
      </footer>
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://kit.fontawesome.com/06f32376e9.js" crossorigin="anonymous"></script>
     <script src="./Javascript/script.js"></script>
 </body>

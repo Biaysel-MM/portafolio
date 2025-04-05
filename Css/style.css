@@ -259,6 +259,7 @@ body{
     color: var(--blanco-clarito);
     margin-bottom: 15px;
     font-size: 20px;
+    max-width: 1600px;
 }
 .carts-content__vista, .carts-content__vista-icon{
     display: flex;
@@ -310,8 +311,8 @@ body{
     font-size: 22px;
 }
 .sobre-mi__habilidades img{
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 80px;
+    max-height: 80px;
 }
 .sobre-mi__habilidades-container{
     display: flex;
@@ -398,6 +399,27 @@ body{
 .contacto__formulario button:hover{
     opacity: .9;
     transition: opacity .2s ease;
+}
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.dark-mode .success-message {
+    background-color: #2E7D32;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 /* seccion del footer */
 .footer__container-general{

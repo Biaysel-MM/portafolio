@@ -51,7 +51,7 @@
         flex-direction: column;
     }
     .proyectos__carts-content p{
-        max-width: 600px;
+        max-width: 800px;
     }
     .proyectos__carts-img-principal {
         max-width: 600px;
@@ -74,7 +74,7 @@
         margin-top: 20px;
     }
     .sobre-mi__content1, .sobre-mi__content2{
-        max-width: 750px;
+        max-width: 800px;
     }
     .sobre-mi__titulo2{
         width: 100%;

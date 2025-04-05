@@ -43,4 +43,31 @@ menuResponsive.addEventListener('click', function(){
     faBarsOpen.classList.toggle('none');
 });
 
+    // 1. Configuración inicial de EmailJS (usa tus credenciales)
+    (function() {
+        emailjs.init('tu-public-key'); // Reemplaza con tu Public Key
+    })();
 
+    // 2. Manejo del formulario (sin cambiar tu estructura)
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // 3. Envío del formulario (conservando tus names originales)
+        emailjs.sendForm('tu-service-id', 'tu-template-id', this)
+            .then(() => {
+                // Muestra mensaje de éxito
+                const successMsg = document.getElementById('successMessage');
+                successMsg.style.display = 'block';
+                
+                // Oculta el mensaje después de 3 segundos
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 3000);
+                
+                // Opcional: Resetea el formulario
+                this.reset();
+            }, (error) => {
+                console.error('Error al enviar:', error);
+                alert('Ocurrió un error al enviar el mensaje. Por favor inténtalo nuevamente.');
+            });
+    });
