@@ -292,11 +292,13 @@
                 <h1>Contacto</h1>
             </div>
             <div class="contacto__content">
-                <form class="contacto__formulario" action="https://formsubmit.co/gamerbian001@gmail.com" method="POST">
+                <form id="contactoForm" class="contacto__formulario" action="https://formsubmit.co/gamerbian001@gmail.com" method="POST">
                     <!-- Campos ocultos para configuración -->
-                    <input type="hidden" name="_next" value="https://biaysel-mm.github.io/portafolio/#contacto#success">
-                    <input type="hidden" name="_template" value="basic">
-    
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="javascript:void(0)">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje de contacto">
+                    <input type="hidden" name="_template" value="table">
+
                     <div class="contacto__form-container">
                         <label for="name">Escribe tu nombre:</label>
                         <input type="text" name="name" id="name" placeholder="Juan Arcantara" required>
@@ -309,10 +311,14 @@
                         <label for="mensaje">Escribe tu mensaje:</label>
                         <textarea name="mensaje" id="mensaje" placeholder="Mensaje..." required></textarea>
                     </div>
-                    <button type="submit">Enviar mensaje</button>
+                    <button type="submit" class="contacto__btn-enviar">Enviar mensaje</button>
                 </form>
-                <!-- Añade este div para el mensaje (puedes ponerlo al final de tu body) -->
-                <div id="success" class="success-message" style="display: none;">¡Mensaje enviado con éxito!</div>
+                
+                <!-- Mensaje de éxito -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    ¡Mensaje enviado con éxito!
+                </div>
+                
                 <div class="contacto__imagen-de-contacto">
                     <img src="./Images/imagen-de-contacto.png" alt="imagen-de-contacto">
                 </div>
