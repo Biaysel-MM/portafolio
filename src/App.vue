@@ -36,36 +36,36 @@ onUnmounted(() => {
     <Sidebar />
 
     <!-- Background grid overlay -->
-    <div class="fixed inset-0 bg-grid pointer-events-none z-[1]" />
+    <div class="fixed inset-0 bg-grid pointer-events-none z-1" />
 
     <!-- Radial glow accents -->
-    <div class="fixed top-1/4 -left-32 w-96 h-96 bg-[var(--neon-primary)]/2 rounded-full blur-[150px] pointer-events-none z-[1]" />
-    <div class="fixed bottom-1/4 -right-32 w-96 h-96 bg-[var(--neon-tertiary)]/1.5 rounded-full blur-[150px] pointer-events-none z-[1]" />
+    <div class="fixed top-1/4 -left-32 w-96 h-96 bg-(--neon-primary)/2 rounded-full blur-37.5 pointer-events-none z-1" />
+    <div class="fixed bottom-1/4 -right-32 w-96 h-96 bg-(--neon-tertiary)/1.5 rounded-full blur-37.5 pointer-events-none z-1" />
 
     <!-- Main content -->
-    <main class="relative z-10 lg:ml-[90px]">
+    <main class="relative z-10 lg:ml-22.5">
       <HeroSection />
-      <div class="border-t border-[var(--border-default)]/50">
+      <div class="border-t border-(--border-default)/50">
         <AboutSection />
       </div>
-      <div class="border-t border-[var(--border-default)]/50">
-        <TechOrbit />
-      </div>
-      <div class="border-t border-[var(--border-default)]/50">
+      <div class="border-t border-(--border-default)/50">
         <ProjectsSection />
       </div>
-      <div class="border-t border-[var(--border-default)]/50">
+      <div class="border-t border-(--border-default)/50">
+        <TechOrbit />
+      </div>
+      <div class="border-t border-(--border-default)/50">
         <ContactSection />
       </div>
 
       <!-- Footer -->
-      <footer class="border-t border-[var(--border-default)]/50 py-8 px-6">
+      <footer class="border-t border-(--border-default)/50 py-8 px-6 2xl:ml-7 xl:ml-7 sm:ml-0 lg:ml-7">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p class="text-[var(--text-muted)] text-sm font-['JetBrains_Mono']">
-            &copy; 2024 Biaysel Minyety
+          <p class="text-(--text-muted) text-sm font-['JetBrains_Mono']">
+            &copy; 2026 Biaysel Minyety
           </p>
-          <p class="text-[var(--text-muted)] text-xs font-['JetBrains_Mono']">
-            Crafted with <span class="text-[var(--neon-primary)]">code</span> &bull; Powered by Vue 3 + Tailwind v4
+          <p class="text-(--text-muted) text-xs font-['JetBrains_Mono']">
+            Crafted with <span class="text-(--neon-primary)">code</span> &bull; Powered by Vue 3 + Tailwind v4
           </p>
         </div>
       </footer>
