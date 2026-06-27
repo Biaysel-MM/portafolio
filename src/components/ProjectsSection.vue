@@ -1,18 +1,20 @@
 <script setup>
 import { ref } from 'vue'
 
+const base = import.meta.env.BASE_URL
+
 const projects = [
   {
     title: 'Kesia',
     subtitle: 'Repostería Artesanal',
     desc: 'Página web de Kesia, repostería artesanal de Keren Arias. Desarrollada con Node.js, Express y MySQL en el backend. Desplegada en Railway para ofrecer una experiencia fluida al descubrir postres, realizar pedidos y disfrutar de dulzura hecha arte.',
-    image: '/Images/imagen-kesia.png',
+    image: `${base}Images/imagen-kesia.png`,
     tags: ['Node.js', 'Express', 'MySQL'],
     links: [
       // { label: 'Preview', icon: 'ph:link', href: 'https://kesia-production.up.railway.app/' }
     ],
     images: [
-      '/Images/imagen-kesia.png',
+      `${base}Images/imagen-kesia.png`,
       '',
       '',
     ]
@@ -21,14 +23,14 @@ const projects = [
     title: 'EJAC',
     subtitle: 'Escuela José Altagracia Castillo',
     desc: 'Sitio web oficial de la Escuela José Altagracia Castillo. Desarrollado desde cero con HTML5, CSS3 y JavaScript, garantizando un diseño responsivo y accesible.',
-    image: '/Images/imagen-ejac.png',
+    image: `${base}Images/imagen-ejac.png`,
     tags: ['HTML5', 'CSS3', 'JavaScript'],
     links: [
       { label: 'Code', icon: 'ph:github-logo', href: 'https://github.com/Biaysel-MM/ejac' },
       { label: 'Preview', icon: 'ph:link', href: 'https://biaysel-mm.github.io/ejac/' }
     ],
     images: [
-      '/Images/imagen-ejac.png',
+      `${base}Images/imagen-ejac.png`,
       '',
       '',
     ]
@@ -37,14 +39,14 @@ const projects = [
     title: 'Diagnostic Care',
     subtitle: 'Centro de Salud',
     desc: 'Sitio web profesional para Diagnostic Care, diseñado con tecnologías modernas. Ofrece una interfaz limpia y funcional, enfocada en brindar información médica accesible y presentar servicios de salud.',
-    image: '/Images/imagen-diagnostic-care.png',
+    image: `${base}Images/imagen-diagnostic-care.png`,
     tags: ['HTML5', 'CSS3', 'JavaScript'],
     links: [
       { label: 'Code', icon: 'ph:github-logo', href: 'https://github.com/Biaysel-MM/Diagnostic-Care' },
       { label: 'Preview', icon: 'ph:link', href: 'https://biaysel-mm.github.io/Diagnostic-Care/' }
     ],
     images: [
-      '/Images/imagen-diagnostic-care.png',
+      `${base}Images/imagen-diagnostic-care.png`,
       '',
       '',
     ]

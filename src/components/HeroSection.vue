@@ -1,9 +1,11 @@
 <script setup>
 import { ref } from 'vue'
 
-const technologies = ['Vue.js', 'Tailwind CSS', 'Sql Server']
+const base = import.meta.env.BASE_URL
+
+const technologies = ['Vue.js', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3', 'Node.js']
 const showCv = ref(false)
-const cvPdf = '/document/Curr%C3%ADculum_Vitae__Biaysel_Minyety_Mejia.pdf'
+const cvPdf = `${base}document/Curr%C3%ADculum_Vitae__Biaysel_Minyety_Mejia.pdf`
 </script>
 
 <template>
@@ -58,7 +60,7 @@ const cvPdf = '/document/Curr%C3%ADculum_Vitae__Biaysel_Minyety_Mejia.pdf'
           <div class="absolute inset-0 bg-(--neon-primary) opacity-5 blur-20 rounded-full scale-150" />
           <div class="relative hexagon-clip w-70 h-80 lg:w-90 lg:h-100">
             <div class="absolute inset-0 hexagon-clip border-2 border-(--neon-primary)/30 animate-pulse-glow" />
-            <img src="/Images/imagen-personal.png" alt="Biaysel Minyety"
+            <img :src="`${base}Images/imagen-personal.png`" alt="Biaysel Minyety"
               class="w-full h-auto object-cover hexagon-clip" />
             <div class="absolute inset-0 hexagon-clip bg-linear-to-t from-(--neon-primary)/10 via-transparent to-transparent" />
           </div>
