@@ -9,9 +9,9 @@ const projects = [
     title: 'WealthMe',
     subtitle: 'Control Financiero Personal',
     featured: true,
-    desc: 'PWA para gestión de finanzas personales en RD$: ingresos, gastos, presupuestos mensuales, tarjetas de crédito y metas de ahorro e inversión con depósitos, retiros y gastos pagados desde cada meta. Incluye dashboard con gráficos (Chart.js), cálculo de Saldo Promedio Diario e intereses, calendario y simulador de pagos con recomendaciones, plantillas de presupuesto y modo oscuro. Desarrollada con Vue 3, Supabase (Auth + PostgreSQL con RLS) y Tailwind CSS, con soporte offline.',
+    desc: 'PWA para gestión de finanzas personales en RD$: ingresos, gastos, presupuestos mensuales, tarjetas de crédito y metas de ahorro e inversión con tipos personalizados (icono y color), depósitos, retiros y gastos pagados desde cada meta. Incluye dashboard con gráficos animados (Chart.js), cálculo de Saldo Promedio Diario e intereses, calendario y simulador de pagos con recomendaciones y modo oscuro. Migrada de Supabase a una API propia en Node.js + Express con MySQL y autenticación JWT; una sola app sirve la API y el frontend en Vue 3 + Tailwind CSS, desplegada en Hostinger.',
     image: `${base}Images/wealthme/0_portada.png`,
-    tags: ['Vue 3', 'Supabase', 'PostgreSQL', 'Chart.js', 'Tailwind CSS', 'PWA'],
+    tags: ['Vue 3', 'Node.js', 'Express', 'MySQL', 'JWT', 'Chart.js', 'Tailwind CSS', 'PWA'],
     links: [
       { label: 'Preview', icon: 'ph:link', href: 'https://wealthme.dominicanbrick.com/' }
     ],
