@@ -3,15 +3,17 @@ import { ref } from 'vue'
 
 const base = import.meta.env.BASE_URL
 
+// featured: se muestran siempre; el resto aparece al pulsar "Ver todos"
 const projects = [
   {
     title: 'WealthMe',
     subtitle: 'Control Financiero Personal',
-    desc: 'PWA para gestión de finanzas personales con control de ingresos, gastos, presupuestos mensuales y tarjetas de crédito. Incluye dashboard con gráficos (Chart.js), cálculo de Saldo Promedio Diario, simulador de pagos, plantillas de presupuesto y modo oscuro. Desarrollada con Vue 3, Supabase (Auth + PostgreSQL) y Tailwind CSS. Desplegada en Netlify con soporte offline.',
+    featured: true,
+    desc: 'PWA para gestión de finanzas personales en RD$: ingresos, gastos, presupuestos mensuales, tarjetas de crédito y metas de ahorro e inversión con depósitos, retiros y gastos pagados desde cada meta. Incluye dashboard con gráficos (Chart.js), cálculo de Saldo Promedio Diario e intereses, calendario y simulador de pagos con recomendaciones, plantillas de presupuesto y modo oscuro. Desarrollada con Vue 3, Supabase (Auth + PostgreSQL con RLS) y Tailwind CSS, con soporte offline.',
     image: `${base}Images/wealthme/0_portada.png`,
-    tags: ['Vue 3', 'Supabase', 'Chart.js', 'Tailwind CSS', 'PWA'],
+    tags: ['Vue 3', 'Supabase', 'PostgreSQL', 'Chart.js', 'Tailwind CSS', 'PWA'],
     links: [
-      { label: 'Preview', icon: 'ph:link', href: 'https://wealthme.netlify.app/' }
+      { label: 'Preview', icon: 'ph:link', href: 'https://wealthme.dominicanbrick.com/' }
     ],
     images: [
       `${base}Images/wealthme/1_logo.png`,
@@ -20,6 +22,43 @@ const projects = [
       `${base}Images/wealthme/4_registro_diario.png`,
       `${base}Images/wealthme/5_analisis.png`,
       `${base}Images/wealthme/6_tarjeta_de_credito.png`,
+    ]
+  },
+  {
+    title: 'CrediFlow',
+    subtitle: 'Gestión de Préstamos',
+    featured: true,
+    desc: 'Sistema web para prestamistas: clientes, préstamos con frecuencia diaria, semanal, quincenal o mensual, registro de pagos, cálculo de mora, calendario de cobros y reportes con gráficos. Genera recibos y reportes en PDF, contacta clientes por WhatsApp o correo e incluye panel de administración con estado "En línea" de cada prestamista y sesiones con expiración deslizante. Tiene modo invitado con datos de prueba guardados en IndexedDB y respaldo JSON. Frontend en Vue 3 + Tailwind CSS y API en NestJS con Prisma y MySQL.',
+    image: `${base}Images/crediflow/0_portada.png`,
+    tags: ['Vue 3', 'NestJS', 'Prisma', 'MySQL', 'Chart.js', 'Tailwind CSS'],
+    links: [
+      { label: 'Preview', icon: 'ph:link', href: 'https://crediflow.dominicanbrick.com/' }
+    ],
+    images: [
+      `${base}Images/crediflow/1_login.png`,
+      `${base}Images/crediflow/2_dashboard.png`,
+      `${base}Images/crediflow/3_calendario.png`,
+      `${base}Images/crediflow/4_clientes.png`,
+      `${base}Images/crediflow/5_prestamos.png`,
+      `${base}Images/crediflow/6_pagos.png`,
+      `${base}Images/crediflow/7_reportes.png`,
+    ]
+  },
+  {
+    title: 'Saboria',
+    subtitle: 'Catálogo de Cafetería y Repostería',
+    featured: true,
+    desc: 'Sitio público con menú interactivo, categorías y página propia por producto con reseñas de estrellas, respuestas y moderación. Los usuarios se registran con verificación por correo. Incluye panel de administración para gestionar productos, categorías, textos del sitio, comentarios y usuarios. Frontend en Vue 3 + Tailwind CSS y API en NestJS con Prisma y MySQL.',
+    image: `${base}Images/saboria/0_portada.png`,
+    tags: ['Vue 3', 'NestJS', 'Prisma', 'MySQL', 'Tailwind CSS'],
+    links: [
+      { label: 'Preview', icon: 'ph:link', href: 'https://saboria.dominicanbrick.com/' }
+    ],
+    images: [
+      `${base}Images/saboria/1_inicio.png`,
+      `${base}Images/saboria/2_menu.png`,
+      `${base}Images/saboria/3_categorias.png`,
+      `${base}Images/saboria/4_contacto.png`,
     ]
   },
   // {
@@ -75,6 +114,10 @@ const projects = [
   },
 ]
 
+const featuredProjects = projects.filter(p => p.featured)
+const otherProjects = projects.filter(p => !p.featured)
+const showAll = ref(false)
+
 const gallery = ref(null)
 const currentIndex = ref(0)
 const isFullscreen = ref(false)
@@ -124,15 +167,16 @@ function nextImage() {
           Proyectos
         </span>
         <h2 class="text-3xl lg:text-5xl font-['Space_Grotesk'] font-bold">
-          Trabajos <span class="text-(--neon-primary)">Recientes</span>
+          Proyectos <span class="text-(--neon-primary)">Destacados</span>
         </h2>
       </div>
 
-      <!-- Projects Grid -->
+      <!-- Projects Grid (v-show en vez de v-if para que el observer de .reveal ya los tenga registrados) -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div v-for="(project, i) in projects" :key="project.title"
+        <div v-for="(project, i) in [...featuredProjects, ...otherProjects]" :key="project.title"
+          v-show="project.featured || showAll"
           class="group relative rounded-2xl border border-(--border-default) bg-(--bg-secondary)/30 overflow-hidden transition-all duration-500 hover:border-(--border-hover) hover:shadow-(--shadow-glow) hover:-translate-y-2 reveal"
-          :class="[`reveal-delay-${i + 1}`]">
+          :class="[`reveal-delay-${(i % 3) + 1}`]">
 
           <!-- Image -->
           <div class="relative h-48 overflow-hidden">
@@ -192,6 +236,15 @@ function nextImage() {
           <div
             class="absolute top-0 right-0 w-12 h-12 border-t border-r border-(--neon-primary)/0 group-hover:border-(--neon-primary)/30 transition-all duration-500 rounded-tr-2xl" />
         </div>
+      </div>
+
+      <!-- Ver todos -->
+      <div v-if="otherProjects.length" class="flex justify-center mt-12">
+        <button @click="showAll = !showAll"
+          class="flex items-center gap-2 px-6 py-3 rounded-lg border border-(--border-default) text-sm font-['JetBrains_Mono'] text-(--neon-primary) transition-all duration-300 hover:border-(--border-hover) hover:shadow-(--shadow-glow)">
+          <iconify-icon :icon="showAll ? 'ph:caret-up' : 'ph:squares-four'" width="16" />
+          {{ showAll ? 'Ver menos' : `Ver todos los proyectos (${projects.length})` }}
+        </button>
       </div>
     </div>
 
