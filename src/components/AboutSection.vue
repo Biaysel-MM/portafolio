@@ -20,7 +20,8 @@ const cards = [
           <br />creyente por <span class="text-(--neon-primary)">convicción</span>
         </h2>
         <p class="text-(--text-secondary) max-w-2xl mx-auto text-lg">
-          Estudiante de Desarrollo de Software en ITLA, combinando tecnología, música y disciplina
+          Tecnólogo en Desarrollo de Software (ITLA) y programador en la Contraloría General de la República,
+          combinando tecnología, música y disciplina
           para crear experiencias digitales únicas.
         </p>
       </div>

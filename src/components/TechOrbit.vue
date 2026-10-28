@@ -3,21 +3,23 @@ import { ref, computed, onMounted } from 'vue'
 
 const technologies = [
   { name: 'Vue.js', icon: 'simple-icons:vuedotjs' },
+  { name: 'TypeScript', icon: 'simple-icons:typescript' },
+  { name: 'JavaScript', icon: 'simple-icons:javascript' },
   { name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss' },
   { name: 'HTML', icon: 'simple-icons:html5' },
   { name: 'CSS', icon: 'simple-icons:css3' },
-  { name: 'JavaScript', icon: 'simple-icons:javascript' },
-  { name: 'Bootstrap', icon: 'simple-icons:bootstrap' },
+  { name: 'C#', icon: 'devicon-plain:csharp' },
+  { name: '.NET', icon: 'simple-icons:dotnet' },
   { name: 'Node.js', icon: 'simple-icons:nodedotjs' },
+  { name: 'NestJS', icon: 'simple-icons:nestjs' },
   { name: 'Express', icon: 'simple-icons:express' },
-  { name: 'ASP.NET', icon: 'simple-icons:dotnet' },
-  { name: 'Swagger', icon: 'simple-icons:swagger' },
+  { name: 'SQL Server', icon: 'devicon-plain:microsoftsqlserver' },
+  { name: 'MySQL', icon: 'simple-icons:mysql' },
+  { name: 'PostgreSQL', icon: 'simple-icons:postgresql' },
+  { name: 'Prisma', icon: 'simple-icons:prisma' },
+  { name: 'Supabase', icon: 'simple-icons:supabase' },
   { name: 'Git', icon: 'simple-icons:git' },
   { name: 'GitHub', icon: 'simple-icons:github' },
-  { name: 'GitLab', icon: 'simple-icons:gitlab' },
-  { name: 'Sourcetree', icon: 'simple-icons:sourcetree' },
-  { name: 'SQL Server', icon: 'simple-icons:microsoftsqlserver' },
-  { name: 'Figma', icon: 'simple-icons:figma' },
 ]
 
 const viewMode = ref('orbit')
@@ -30,7 +32,7 @@ const angleStep = computed(() => (2 * Math.PI) / technologies.length)
 function updateRadius() {
   if (!orbitRef.value) return
   const w = orbitRef.value.offsetWidth
-  radius.value = Math.floor(w * 0.36)
+  radius.value = Math.floor(w * 0.41)
 }
 
 onMounted(() => {

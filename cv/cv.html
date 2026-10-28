@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Currículum Vitae - Biaysel Minyety Mejia</title>
+<style>
+  @page { size: Letter; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Inter, Arial, sans-serif;
+    color: #1f2937;
+    font-size: 9.9pt;
+    line-height: 1.36;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page { padding: 0.42in 0.6in; }
+  a { color: #0e7490; text-decoration: none; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 12px; border-bottom: 2.5px solid #0891b2; }
+  h1 { font-size: 24pt; font-weight: 700; color: #0f172a; letter-spacing: -0.3px; line-height: 1.1; }
+  .role { font-size: 12.5pt; font-weight: 600; color: #0891b2; margin-top: 3px; }
+  .contact { text-align: right; font-size: 9pt; color: #475569; line-height: 1.55; }
+
+  section { margin-top: 10px; }
+  h2 {
+    font-size: 10.5pt; font-weight: 700; color: #0891b2; text-transform: uppercase; letter-spacing: 1.2px;
+    padding-bottom: 3px; margin-bottom: 7px; border-bottom: 1px solid #e2e8f0;
+  }
+  .summary { color: #334155; }
+
+  .item { margin-bottom: 7px; }
+  .item:last-child { margin-bottom: 0; }
+  .item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .item-title { font-weight: 600; color: #0f172a; }
+  .item-title span { font-weight: 400; color: #475569; }
+  .date { font-size: 9pt; color: #64748b; white-space: nowrap; }
+  ul { padding-left: 15px; margin-top: 3px; color: #334155; }
+  li { margin-bottom: 1.5px; }
+  .tags { margin-top: 4px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .tags span { font-size: 8pt; padding: 1px 6px; border-radius: 4px; background: #ecfeff; color: #0e7490; border: 1px solid #cffafe; }
+  .desc { color: #334155; margin-top: 2px; }
+
+  .skills { display: grid; grid-template-columns: 108px 1fr; row-gap: 3px; }
+  .skills dt { font-weight: 600; color: #0f172a; }
+  .skills dd { color: #334155; }
+
+  .two { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>Biaysel Minyety Mejia</h1>
+      <div class="role">Desarrollador Full Stack</div>
+    </div>
+    <div class="contact">
+      Ocoa, República Dominicana · 829-801-6578<br />
+      <a href="mailto:biayselminyety001@gmail.com">biayselminyety001@gmail.com</a><br />
+      <a href="https://www.linkedin.com/in/biaysel-minyety-21217a279/">LinkedIn</a> ·
+      <a href="https://biaysel-mm.github.io/portafolio/">Portafolio</a> ·
+      <a href="https://github.com/Biaysel-MM">GitHub</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Perfil</h2>
+    <p class="summary">
+      Tecnólogo en Desarrollo de Software (ITLA) y programador en la Contraloría General de la República.
+      Desarrollo aplicaciones web completas: interfaces con Vue.js y Tailwind CSS, APIs con C# / .NET y
+      Node.js (NestJS), y bases de datos SQL Server, MySQL y PostgreSQL. Tengo proyectos propios desplegados
+      en producción, desde la base de datos hasta el despliegue.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experiencia</h2>
+    <div class="item">
+      <div class="item-head">
+        <div class="item-title">Programador <span>— Contraloría General de la República</span></div>
+        <div class="date">Feb 2026 – Actualidad</div>
+      </div>
+      <ul>
+        <li>Desarrollo de interfaces web con Vue.js y Tailwind CSS para sistemas internos de la institución.</li>
+        <li>Desarrollo y mantenimiento de servicios backend con C# y .NET.</li>
+        <li>Consultas y manejo de datos en SQL Server.</li>
+      </ul>
+      <div class="tags"><span>Vue.js</span><span>Tailwind CSS</span><span>C#</span><span>.NET</span><span>SQL Server</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Proyectos</h2>
+    <div class="item">
+      <div class="item-head">
+        <div class="item-title">WealthMe <span>— Control financiero personal</span></div>
+        <a class="date" href="https://wealthme.dominicanbrick.com/">wealthme.dominicanbrick.com</a>
+      </div>
+      <p class="desc">PWA de finanzas personales: ingresos, gastos, presupuestos, tarjetas de crédito (cálculo de Saldo Promedio Diario, intereses y simulador de pagos) y metas de ahorro e inversión. Autenticación y base de datos con Supabase y políticas RLS.</p>
+      <div class="tags"><span>Vue 3</span><span>Supabase</span><span>PostgreSQL</span><span>Chart.js</span><span>Tailwind CSS</span><span>PWA</span></div>
+    </div>
+    <div class="item">
+      <div class="item-head">
+        <div class="item-title">CrediFlow <span>— Gestión de préstamos</span></div>
+        <a class="date" href="https://crediflow.dominicanbrick.com/">crediflow.dominicanbrick.com</a>
+      </div>
+      <p class="desc">Sistema para prestamistas: clientes, préstamos con distintas frecuencias, pagos, mora, calendario de cobros, reportes y recibos en PDF y panel de administración. Sesiones con expiración y modo invitado con IndexedDB.</p>
+      <div class="tags"><span>Vue 3</span><span>NestJS</span><span>TypeScript</span><span>Prisma</span><span>MySQL</span><span>Tailwind CSS</span></div>
+    </div>
+    <div class="item">
+      <div class="item-head">
+        <div class="item-title">Saboria <span>— Catálogo de cafetería y repostería</span></div>
+        <a class="date" href="https://saboria.dominicanbrick.com/">saboria.dominicanbrick.com</a>
+      </div>
+      <p class="desc">Sitio con menú interactivo, reseñas con moderación, registro con verificación por correo y panel de administración de productos, categorías, textos y usuarios.</p>
+      <div class="tags"><span>Vue 3</span><span>NestJS</span><span>TypeScript</span><span>Prisma</span><span>MySQL</span><span>Tailwind CSS</span></div>
+    </div>
+    <div class="item">
+      <div class="item-head">
+        <div class="item-title">Diagnostic Care y EJAC <span>— Sitios web</span></div>
+        <div class="date">2023</div>
+      </div>
+      <p class="desc">Plataforma médica con predicción de síntomas y sitio oficial de la Escuela José Altagracia Castillo.</p>
+      <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Habilidades técnicas</h2>
+    <dl class="skills">
+      <dt>Frontend</dt><dd>Vue.js, JavaScript, TypeScript, Tailwind CSS, HTML5, CSS3, Bootstrap, Chart.js</dd>
+      <dt>Backend</dt><dd>C#, .NET / ASP.NET Web API, Node.js, NestJS, Express, Prisma</dd>
+      <dt>Bases de datos</dt><dd>SQL Server, MySQL, PostgreSQL, Supabase</dd>
+      <dt>Herramientas</dt><dd>Git, GitHub, GitLab, Vite, Swagger, Figma</dd>
+    </dl>
+  </section>
+
+  <div class="two">
+    <section>
+      <h2>Educación</h2>
+      <div class="item">
+        <div class="item-head">
+          <div class="item-title">Tecnólogo en Desarrollo de Software <span>— ITLA</span></div>
+          <div class="date">2023 – 2025 · Graduado</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <div class="item-title">Curso de Git y GitHub Profesional <span>— MoureDev</span></div>
+          <div class="date">2023</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <div class="item-title">Bachiller Técnico en Informática <span>— LTJNC</span></div>
+          <div class="date">2022</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Idiomas</h2>
+      <div class="item"><div class="item-title">Español <span>— Nativo</span></div></div>
+      <div class="item"><div class="item-title">Inglés <span>— Básico (A2)</span></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
